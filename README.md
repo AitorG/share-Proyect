@@ -9,5 +9,4 @@ _____________________
 
 First access:     
 
-User:        admin
-password:    admin  
+User: admin  ||  password: admin  
