@@ -1,0 +1,55 @@
+<div class="container widthed noMargin noPadding">
+	<div class="sizeAddProyecto jumbotron noMargin">
+		<form class="form-inline" method="post" onsubmit="return confirmAddProyecto();" id="formAddProyecto">
+	
+			<h2 id="headProyecto">Título: <input type="text" class="form-control" id="tituloProyecto" name="tituloProyecto" placeholder="Nombre ..." required="required"> </h2>
+			<p class="parrafoProyecto">
+				<strong>Alumno: </strong> 
+				<select required="required" onchange="habilitarAlumno();" class="form-control" id="alumnoSelect" name="alumnoSelect" > 
+					<option id="alumno" selected="selected" value="0">Seleccionar Alumno</option>
+				</select>
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Tutor: </strong>
+				<select required="required" class="form-control" id="tutorSelect" name="tutorSelect"  value=""> 
+					<option id="tutor" selected="selected" value="0">Seleccionar Tutor</option>
+				</select>
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Fecha de Asignación:</strong>
+				<input required="required" type="date" class="form-control" id="fechaAsig" name="fechaAsig" placeholder="Fecha de asignacion ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Fecha de Presentación:</strong>
+				<input required="required" type="date" class="form-control" id="fechaPresentacion" name="fechaPresentacion" placeholder="Fecha de presentación ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Convocatoria: </strong>
+				<input required="required" type="text" class="form-control" id="convocatoria" name="convocatoria" placeholder="Convocatoria ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Materia: </strong>
+				<input required="required" type="text" class="form-control" id="materia" name="materia" placeholder="Materia ..."  > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Progreso: </strong>
+				<input required="required" type="text" class="form-control" id="progreso" name="progreso" placeholder="Progreso ..."  size="5" pattern="[0-9]{1,3}" maxlength="3">
+			</p>
+			<p class="parrafoProyecto">
+				<strong>Estado: </strong> 
+				<select required="required" class="form-control" id="estadoSelect" name="estadoSelect" > 
+					<option id="estado" selected="selected" value="0">Seleccionar Estado</option>
+				</select>
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Nota: </strong>
+				<input required="required" type="text" class="form-control" id="nota" name="nota" placeholder="Nota ..."  size="4" maxlength="5"> 
+			</p>
+			<p class="parrafoProyecto">
+				<input type="submit" value="Aplicar cambios" class="btn btn-success" id="botonAplicar">
+				<button type="button" onclick="adminProyectos('todos');" class="btn btn-danger" id="botonCancelar">Cancelar</button>
+			</p>
+			
+		</form>
+	</div>
+</div>

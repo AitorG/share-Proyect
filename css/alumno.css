@@ -1,0 +1,38 @@
+#wrapper{
+	padding:0px !important;
+	width:100%;
+	background-color: white;
+}
+#page-wrapper{
+	background-color: white;
+}
+
+.orange{
+	width:auto !important;
+	border-bottom:none !important;
+	color:#999 !important;
+}
+
+.noMargin{
+	height:30px;
+	background:url("../img/editar.png") right no-repeat;
+	background-size:contain;
+}
+.noMargin:hover{
+	cursor:pointer;
+}
+#barra{
+	font-size: 20px;
+	padding-top:5px;
+}
+
+.verProyectos{
+	margin-bottom:10px;
+    background: url("../img/viewWhite.png") center no-repeat;
+    background-size: 25px;
+    background-position: 8px;
+    padding-left:40px;
+}
+#botonesAlumno{
+	display:none;
+}

@@ -1,0 +1,42 @@
+<div class="container widthed noMargin noPadding">
+
+
+	<div class="sizeProyecto jumbotron noMargin">
+		<form class="form-inline" method="post" onsubmit="return confirmAddProfesor();" id="formAddProfesor">
+	
+			<h2 id="headProyecto">Añadir profesor </h2>
+			
+			<p class="parrafoProyecto"> 
+				<strong>Nombre:</strong>
+				<input required="required" type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre ..."  > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Primer apellido: </strong>
+				<input required="required" type="text" class="form-control" id="apellido1" name="apellido1" placeholder="Primer apellido ..." > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Segundo apellido: </strong>
+				<input required="required" type="text" class="form-control" id="apellido2" name="apellido2" placeholder="Segundo apellido ..." > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Usuario:</strong>
+				<input required="required" type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario ..." > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Contraseña:</strong>
+				<input required="required" type="password" class="form-control" id="password" name="password" placeholder="Contraseña ..." > 
+			</p>
+			
+			<p class="parrafoProyecto"> 
+				<strong>Email:</strong>
+				<input required="required" type="email" class="form-control" id="email" name="email" placeholder="Email ..." > 
+			</p>
+			
+			<p class="parrafoProyecto">
+				<input type="submit" value="Añadir profesor" class="btn btn-success" id="botonAplicar">
+				<button type="button" onclick="adminProfesores();" class="btn btn-danger" id="botonCancelar">Cancelar</button>
+			</p>
+			
+		</form>
+	</div>
+</div>

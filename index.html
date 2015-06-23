@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="author" content="Aitor Guisado">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestor de proyectos</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="javascript/jquery-ui.js"></script>
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootbox.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
+
+   
+</head>
+<body>
+    <div class="container">
+    
+        <div class="jumbotron primaryLayer">
+            <h1 class='textCentered'>ShareProject</h1>
+            <p class='textCentered'>
+                Gestiona los contenidos de tu proyecto y mantén una comunicación activa
+                con tu tutor desde cualquier navegador (incluídos navegadores de dispositivos móviles).
+            </p>
+            <form class="form-signin" id="loginForm" method="post" onsubmit="return false;">
+                <h2 class="form-signin-heading textCentered">Acceder</h2>
+                <label for="inputEmail" class="sr-only">Usuario</label>
+                <input type="text" id="inputEmail" name="loginUser" class="form-control" placeholder="Usuario" required autofocus>
+                <label for="inputPassword" class="sr-only">Contraseña</label>
+                <input type="password" id="inputPassword" name="loginPassword" class="form-control" placeholder="Contraseña" required>
+               <!-- Posible checkbox para recordarme 
+                   <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="remember-me"> Recordarme
+                      </label>
+                    </div> 
+                -->
+                <button class="btn btn-lg btn-primary btn-block colorBotones" type="submit" onclick="logIn();">Entrar</button>
+            </form>
+        </div>
+        
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">® Aitor Guisado Camacho </p>
+            </div>
+        </footer>
+
+
+    </div> <!-- /container -->
+</body>
+</html>

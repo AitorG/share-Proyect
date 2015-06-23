@@ -1,0 +1,53 @@
+<div class="container widthed noMargin noPadding">
+
+	<div class="sizeMenu" id="sizeMenu">
+		<img src="../img/back.png" class="img-responsive center-block pointer" height="70" width="70" alt="Atrás" title="Atrás" onclick="retrocederAlumno();" id="retroceder"><br>
+		<img src="../img/editar.png" class="img-responsive center-block pointer" height="70" width="70" alt="Editar Proyecto" title="Editar Proyecto" onclick="habilitarEdicionAlumno();"><br>
+		<img src="../img/delete.png" class="img-responsive center-block pointer" height="70" width="70" alt="Eliminar Proyecto" title="Eliminar Proyecto" onclick="eliminarAlumno();" id="eliminar"><br>
+	</div>
+
+	<div class="sizeProyecto jumbotron noMargin">
+		<form class="form-inline" method="post" onsubmit="return aplicarEdicionAlumno();" id="formAddAlumno">
+	
+			<h2 id="headProyecto">Modificar alumno </h2>
+			
+			<p class="parrafoProyecto"> 
+				<strong>Nombre:</strong>
+				<input required="required" type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre ..." disabled="disabled"  > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Primer apellido: </strong>
+				<input required="required" type="text" class="form-control" id="apellido1" name="apellido1" placeholder="Primer apellido ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Segundo apellido: </strong>
+				<input required="required" type="text" class="form-control" id="apellido2" name="apellido2" placeholder="Segundo apellido ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Contraseña:</strong>
+				<input required="required" type="password" class="form-control" id="password" name="password" placeholder="Contraseña ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>DNI:</strong>
+				<input required="required" type="text" class="form-control" id="dni" name="dni" placeholder="DNI ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Email:</strong>
+				<input required="required" type="email" class="form-control" id="email" name="email" placeholder="Email ..." disabled="disabled" > 
+			</p>
+			<p class="parrafoProyecto">
+				<strong>Ciclo: </strong> 
+				<select required="required" class="form-control" id="cicloSelect" name="cicloSelect" disabled="disabled"> 
+					<option id="ciclo" selected="selected" value="0">Seleccionar Ciclo</option>
+				</select>
+			</p>
+			
+			<p class="parrafoProyecto">
+				<input type="submit" value="Aplicar cambios" class="btn btn-success" id="botonAplicar">
+				<button type="button" onclick="adminAlumnos();" class="btn btn-danger" id="botonCancelar">Cancelar</button>
+			</p>
+			<input type="hidden" name="idAlumno" id="idAlumno" value="" />
+			<input type="hidden" name="idCiclo" id="idCiclo" value="" />
+		</form>
+	</div>
+</div>

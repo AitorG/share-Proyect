@@ -1,0 +1,69 @@
+<div class="container widthed noMargin noPadding">
+	<div class="sizeMenu" id="sizeMenu">
+		<img src="../img/back.png" class="img-responsive center-block pointer" height="70" width="70" alt="Atrás" title="Atrás" onclick="retroceder();"><br>
+		<img src="../img/editar.png" class="img-responsive center-block pointer" height="70" width="70" alt="Editar Proyecto" title="Editar Proyecto" onclick="habilitarEdicion();"><br>
+		<img src="../img/mensaje.png" class="img-responsive center-block pointer" height="70" width="70" alt="Mensajes Proyecto" title="Mensajes del Proyecto" onclick="verMensajesProyecto();"><br>
+		<img src="../img/files.png" class="img-responsive center-block pointer" height="70" width="70" alt="Archivos" title="Archivos del proyecto" onclick="verArchivos();"><br>
+		<img src="../img/delete.png" class="img-responsive center-block pointer" height="70" width="70" alt="Eliminar Proyecto" title="Eliminar Proyecto" onclick="eliminarProyecto();"><br>
+	</div>
+
+	<div class="sizeProyecto jumbotron noMargin">
+		<form class="form-inline" method="post" onsubmit="return aplicarEdicion();" id="formEditarProyecto">
+	
+			<h2 id="headProyecto">Título: <input type="text" class="form-control" id="tituloProyecto" name="tituloProyecto" placeholder="Nombre ..." disabled="disabled" required="required"> </h2>
+			<p class="parrafoProyecto">
+				<strong>Alumno: </strong> 
+				<select required="required" onchange="habilitarAlumno();" class="form-control" id="alumnoSelect" name="alumnoSelect" disabled="disabled"> 
+					<option id="alumno" selected="selected" value="0"></option>
+				</select>
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Tutor: </strong>
+				<select required="required" class="form-control" id="tutorSelect" name="tutorSelect" disabled="disabled" value=""> 
+					<option id="tutor" selected="selected" value="0"></option>
+				</select>
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Fecha de Asignación:</strong>
+				<input required="required" type="date" class="form-control" id="fechaAsig" name="fechaAsig" placeholder="Fecha de asignacion ..." disabled="disabled"> 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Fecha de Presentación:</strong>
+				<input required="required" type="date" class="form-control" id="fechaPresentacion" name="fechaPresentacion" placeholder="Fecha de presentación ..." disabled="disabled"> 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Convocatoria: </strong>
+				<input required="required" type="text" class="form-control" id="convocatoria" name="convocatoria" placeholder="Convocatoria ..." disabled="disabled"> 
+			</p>
+			<p class="parrafoProyecto">
+				<strong>Ciclo: </strong> 
+				<input required="required" type="text" class="form-control" id="ciclo" placeholder="Ciclo ..." disabled="disabled" readonly="readonly"> 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Materia: </strong>
+				<input required="required" type="text" class="form-control" id="materia" name="materia" placeholder="Materia ..." disabled="disabled"> 
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Progreso: </strong>
+				<input required="required" type="text" class="form-control" id="progreso" name="progreso" placeholder="Progreso ..." disabled="disabled" size="5" pattern="[0-9]{1,3}" maxlength="3">
+			</p>
+			<p class="parrafoProyecto">
+				<strong>Estado: </strong> 
+				<select required="required" class="form-control" id="estadoSelect" name="estadoSelect" disabled="disabled"> 
+					<option id="estado" selected="selected" value="0"></option>
+				</select>
+			</p>
+			<p class="parrafoProyecto"> 
+				<strong>Nota: </strong>
+				<input required="required" type="text" class="form-control" id="nota" name="nota" placeholder="Nota ..." disabled="disabled" size="4" maxlength="5"> 
+			</p>
+			<p class="parrafoProyecto">
+				<button type="submit" class="btn btn-success" id="botonAplicar">Aplicar cambios</button>
+				<button type="button" onclick="cancelarEdicion();" class="btn btn-danger" id="botonCancelar">Cancelar</button>
+			</p>
+			<input type="hidden" name="idProyecto" id="idProyecto" value="" />
+			<input type="hidden" name="idAlumno" id="idAlumno" value="" />
+			<input type="hidden" name="idProfesor" id="idProfesor" value="" />
+		</form>
+	</div>
+</div>
